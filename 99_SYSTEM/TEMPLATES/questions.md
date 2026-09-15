@@ -9,3 +9,5 @@ Data criação:
 ## Resultado
 
 ## Gaps identificados
+
+## Avaliações
