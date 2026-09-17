@@ -21,23 +21,35 @@ Pesquisa externa não é obrigatória. Quando for necessária para corrigir ou e
 
 Determine o objetivo do estudo, por que ele importa agora e o tempo disponível. Pergunte apenas pelo que não estiver claro no pedido ou no estado do tópico. Restrinja a sessão a um tópico e reduza o objetivo se ele não couber no tempo disponível.
 
-Antes de ensinar, registre em `Perguntas sobre {{TOPIC}}.md`, sob `## Diagnóstico inicial`, as perguntas usadas, uma síntese das respostas e a avaliação inicial. Use registros compactos; não transcreva toda a conversa.
+Faça um diagnóstico breve para localizar o ponto de partida, não para medir todo o domínio. Comece com uma solicitação ampla que permita ao usuário mostrar o que sabe. Faça somente as perguntas adicionais necessárias para resolver dúvidas que mudem o ensino, sem quantidade fixa. Encerre o diagnóstico assim que distinguir conhecimento demonstrado e gaps principais; não continue testando conceitos já evidenciados.
+
+Concluído o diagnóstico, registre em `Perguntas sobre {{TOPIC}}.md`, sob `## Diagnóstico inicial`, as perguntas usadas, uma síntese das respostas e a avaliação inicial. Use registros compactos; não transcreva toda a conversa. Selecione um percurso pequeno e coerente com o objetivo e o tempo disponíveis, sem tentar esgotar o tópico.
 
 ## Condução
 
-Alterne entre dois papéis, nesta ordem:
+Atue principalmente como professor interativo. A avaliação serve para adaptar e verificar o ensino, não para conduzir a sessão como entrevista ou questionário.
 
-1. **Avaliador:** proponha uma pergunta, explicação ou exercício sem consulta e espere a tentativa do usuário.
-2. **Professor:** classifique a tentativa como correta, parcial, incorreta ou sem base; explicite acertos, gaps e a origem provável do erro; ensine somente o necessário para corrigir ou ampliar o modelo.
-3. **Avaliador:** teste a mudança com recuperação, explicação própria ou uma variação semelhante.
+Escolha o caminho a partir do diagnóstico:
 
-Faça uma pergunta ou exercício por vez. Não revele a resposta antes da tentativa. Se o usuário declarar não possuir base suficiente, apresente somente a base mínima e solicite recuperação logo depois.
+- **Pouca ou nenhuma base:** construa os fundamentos progressivamente em blocos curtos. Comece pelo conceito indispensável e só então avance, conforme a compreensão, por finalidade, funcionamento, importância, ocorrência, aplicação e conceitos relacionados. Ensine um bloco por vez; não despeje toda a visão geral nem apresente todos os fundamentos de uma só vez.
+- **Conhecimento prévio:** trate explicações e aplicações corretas como evidência suficiente para a sessão. Comece a ensinar pelos gaps e pelo próximo passo relevante, omitindo o que já foi demonstrado.
 
-Adapte a próxima pergunta à evidência observada. Priorize gaps e erros relevantes; não acumule perguntas predeterminadas quando a resposta alterar o caminho. Antes de avançar para outra parte do tópico, exija uma explicação ou aplicação sem pistas.
+Para cada parte relevante:
 
-Quando pertinente ao tópico, avance gradualmente por teoria, exemplo mínimo, aplicação, testes, provocação de falhas, diagnóstico e trade-offs. Não force etapas técnicas que não façam sentido. Use analogias ou diagramas para tornar relações explícitas, nunca como substitutos da recuperação e da aplicação.
+1. explique um bloco curto e conectado ao anterior;
+2. quando houver conteúdo suficiente para verificar, peça uma explicação com palavras próprias, uma pequena aplicação ou uma pergunta focada;
+3. reconheça o que foi compreendido, corrija a causa de erros e complemente somente o necessário;
+4. use a resposta para escolher a próxima explicação.
 
-Registre em `## Perguntas adaptativas` somente as perguntas relevantes, uma síntese das tentativas, o feedback decisivo e o resultado da nova tentativa. Um erro relevante deve registrar o raciocínio incorreto e a correção verificada, não apenas `errado`.
+Tentativa antes da resposta continua obrigatória em diagnósticos, verificações e problemas propostos, mas não obrigue o usuário a descobrir sozinho conteúdo que ainda não foi ensinado. Faça uma pergunta ou exercício por vez quando precisar verificar; não use baterias de perguntas como estrutura da aula.
+
+Considere coberto durante a sessão todo conceito demonstrado com evidência suficiente. Só volte a testá-lo se surgir contradição, se ele for pré-requisito para o próximo bloco ou na verificação final integradora. Após erro relevante, ensine a correção e use uma única variação direcionada; se a correção for demonstrada, avance. Se o gap persistir e bloquear o progresso, ensine novamente por outra abordagem antes de verificar.
+
+Use analogias, diagramas, exemplos, teoria, aplicação, testes, falhas, diagnóstico e trade-offs apenas quando ajudarem o próximo objetivo de aprendizagem. Não transforme essa lista em checklist obrigatório.
+
+Antes de encerrar, faça uma verificação breve e integradora do objetivo da sessão, não uma nova sequência de perguntas. Respeite o tempo informado e pare em um ponto coerente, registrando como gap o que ficar para continuação.
+
+Consolide em `## Perguntas adaptativas` apenas verificações relevantes, sínteses das tentativas, feedback decisivo e resultado. Não interrompa cada interação para editar o arquivo; persista o diagnóstico ao concluí-lo e consolide o restante no encerramento. Um erro relevante deve registrar o raciocínio incorreto e a correção verificada, não apenas `errado`.
 
 ## Encerramento e persistência
 

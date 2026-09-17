@@ -183,11 +183,70 @@ No momento, a estratégia deve privilegiar:
 4. **banco de dados, testes e infraestrutura como competências obrigatórias de backend**;
 5. **arquitetura e sistemas distribuídos somente após consolidar os fundamentos necessários**;
 6. **aplicação prática** — conhecimento relevante deve aparecer em projetos, decisões técnicas ou resolução de problemas;
-7. **capacidade de explicar decisões** — saber dizer por que uma solução foi escolhida, quais alternativas existiam e quais consequências ela possui.
+7. **capacidade de explicar decisões** — saber dizer por que uma solução foi escolhida, quais alternativas existiam e quais consequências ela possui;
+8. **uso responsável de IA** — acelerar tarefas mecânicas sem transferir para a IA a responsabilidade por arquitetura, corretude, segurança ou diagnóstico.
 
 ---
 
-## 8. Uso estratégico da experiência profissional
+## 8. Evidência profissional e portfólio
+
+O progresso não deve ser medido apenas por conteúdos lidos ou tecnologias adicionadas ao currículo. Cada avanço relevante deve gerar uma evidência verificável, escolhida de acordo com o tópico:
+
+- implementação própria e testes;
+- benchmark ou medição antes/depois;
+- experimento que provoque uma falha e registre o diagnóstico;
+- diagrama, documentação ou ADR;
+- aplicação em um projeto executável;
+- explicação técnica escrita, falada ou demonstrada.
+
+Para considerar uma tecnologia pronta para aparecer como destaque no currículo, o usuário deve conseguir explicar, com autonomia:
+
+1. qual problema ela resolveu;
+2. como ela funciona no nível necessário para a decisão;
+3. quais alternativas foram consideradas;
+4. qual trade-off foi aceito;
+5. como o resultado foi validado;
+6. qual falha comum foi observada ou poderia ocorrer.
+
+### Projetos âncora
+
+O portfólio deve priorizar poucos projetos fortes, e não uma coleção de demonstrações superficiais.
+
+- **MarketRoute** é o projeto principal para integrar algoritmos, backend Java, PostgreSQL, arquitetura, performance, cache, testes e operação.
+- Um segundo projeto pode aprofundar mensageria e sistemas distribuídos, como pagamentos ou notificações.
+- Um terceiro projeto só deve existir se houver tempo e evidência suficiente; dois projetos excelentes são preferíveis a três incompletos.
+- O monólito modular deve preceder a extração de microsserviços.
+- Métricas, resultados e experiências apresentados publicamente devem ser reais, reproduzíveis ou explicitamente identificados como exercício; não inventar impacto para preencher o currículo.
+
+Cada projeto relevante deve possuir README executável, objetivo, arquitetura, instruções de execução, testes, decisões técnicas, limitações e, quando viável, deploy ou uma demonstração reproduzível.
+
+### Trilhas profissionais paralelas
+
+Enquanto o roadmap técnico avança, manter em baixa intensidade:
+
+- exercícios de algoritmos e estruturas de dados;
+- preparação de histórias comportamentais no formato STAR;
+- explicação oral de projetos e decisões técnicas;
+- leitura e produção gradual de documentação em inglês;
+- revisão de GitHub, README e currículo com base em evidências reais.
+
+Essas trilhas complementam o estudo principal; não devem interromper a sequência de fundamentos para perseguir palavras-chave de vagas.
+
+### O que não priorizar agora
+
+Não priorizar, antes da base necessária:
+
+- microsserviços antes de um monólito modular bem compreendido;
+- Kubernetes, Terraform ou cloud em nível avançado;
+- muitos bancos NoSQL superficialmente;
+- novas linguagens sem problema concreto que as justifique;
+- certificações como substituto de prática demonstrável;
+- dezenas de Design Patterns decorados;
+- frontend avançado quando o objetivo principal é backend.
+
+---
+
+## 9. Uso estratégico da experiência profissional
 
 A experiência profissional atual deve ser aproveitada principalmente para desenvolver competências transferíveis:
 
@@ -204,7 +263,7 @@ Experiências corporativas podem inspirar estudos e projetos próprios, mas info
 
 ---
 
-## 9. Critério para novas tecnologias
+## 10. Critério para novas tecnologias
 
 Uma nova tecnologia merece prioridade quando pelo menos uma destas condições for relevante:
 
@@ -218,7 +277,20 @@ Evitar estudar tecnologias apenas para aumentar a lista do currículo.
 
 ---
 
-## 10. Diretriz final
+## 11. Relação entre os documentos de planejamento
+
+Para evitar roadmaps concorrentes, usar os arquivos com responsabilidades diferentes:
+
+- este arquivo define contexto, direção, prioridades, critérios de evidência e limites de escopo;
+- `01_ROADMAP_ENGENHARIA_SOFTWARE.md` define a sequência canônica de dependências e o método de acompanhamento;
+- `roadmap_estudos_engenharia_software.md` complementa a sequência com sinais de mercado, práticas de portfólio e preparação para entrevistas;
+- `curriculo_alvo_engenharia_software.pdf` representa um perfil-alvo fictício e serve para identificar evidências que ainda precisam ser construídas, nunca para inventar experiências ou resultados.
+
+Quando houver conflito entre a ordem dos documentos, seguir o `01_ROADMAP` e usar o novo roadmap apenas para selecionar práticas e evidências compatíveis com a fase atual.
+
+---
+
+## 12. Diretriz final
 
 A pergunta principal para orientar os estudos não deve ser:
 

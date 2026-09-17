@@ -23,6 +23,8 @@ Critério de saída de uma fase:
 
 > conseguir explicar e implementar os conceitos principais sem depender da IA para tomar as decisões centrais.
 
+As fases formam uma sequência de dependências, não um calendário rígido. Git, Linux, HTTP, comunicação técnica, projetos e entrevistas acontecem em paralelo em intensidade compatível com a fase atual. Um tópico pode reaparecer para aplicação em um projeto, mas isso não significa reiniciar todo o conteúdo anterior.
+
 ---
 
 # Fase 1 — Fundamentos de Ciência da Computação
@@ -370,6 +372,8 @@ Aprofundar:
 
 ## 3.4 Spring Security
 
+Esta seção estabelece a base necessária para construir APIs seguras. A fase de Segurança de Aplicações aprofunda ameaças, protocolos e controles depois que a base de execução, testes e entrega estiver consolidada.
+
 Aprofundar:
 
 - Authentication;
@@ -499,6 +503,8 @@ Dominar:
 ## Projeto
 
 Subir PostgreSQL real em container durante testes.
+
+Nesta fase, o container é uma infraestrutura de apoio para testar persistência; o estudo aprofundado de imagens, redes, volumes, Dockerfile e Compose fica na Fase 8.
 
 Depois adicionar Redis real com Testcontainers em uma fase futura.
 
@@ -648,7 +654,6 @@ Projeto mínimo:
 ```text
 Spring Boot
 PostgreSQL
-Redis
 ```
 
 subindo com:
@@ -674,18 +679,58 @@ package
  ↓
 docker image
  ↓
-deploy
+ deploy
 ```
+
+Docker e CI/CD entram antes de Redis, mensageria e sistemas distribuídos porque os testes de integração, os ambientes reproduzíveis e a operação desses componentes dependem dessa base.
 
 ---
 
-# Fase 9 — Redis e NoSQL
+# Fase 9 — Segurança de Aplicações
+
+## Objetivo
+
+Entender segurança além das configurações do Spring Security e incorporá-la ao desenvolvimento desde a modelagem da API.
+
+Estudar:
+
+- authentication;
+- authorization;
+- password hashing;
+- salts;
+- sessions;
+- cookies;
+- JWT;
+- OAuth 2.0;
+- OpenID Connect;
+- TLS;
+- CORS;
+- CSRF;
+- XSS;
+- SQL Injection;
+- SSRF;
+- secrets;
+- rate limiting;
+- least privilege.
+
+Estudar o OWASP Top 10 atual.
+
+### Prática
+
+- Implementar autenticação e autorização em uma API.
+- Testar acesso por papéis e permissões.
+- Remover secrets do repositório e configurar variáveis de ambiente.
+- Registrar ameaças, controles e limitações em uma decisão técnica curta.
+
+---
+
+# Fase 10 — Redis e NoSQL
 
 ## Objetivo
 
 Aprender bancos não relacionais a partir dos problemas que resolvem.
 
-## 9.1 Redis
+## 10.1 Redis
 
 Estudar:
 
@@ -714,9 +759,11 @@ Depois provocar:
 - cache stampede;
 - expiração simultânea.
 
+Depois de compreender o comportamento do cache, adicionar Redis ao ambiente Docker e aos testes de integração.
+
 ---
 
-## 9.2 NoSQL
+## 10.2 NoSQL
 
 Primeiro entender as categorias:
 
@@ -741,37 +788,6 @@ Depois estudar MongoDB:
 > Por que eu escolheria MongoDB em vez de PostgreSQL para este problema?
 
 Se não houver resposta concreta, PostgreSQL pode continuar sendo a melhor escolha.
-
----
-
-# Fase 10 — Segurança de Aplicações
-
-## Objetivo
-
-Entender segurança além das configurações do Spring Security.
-
-Estudar:
-
-- authentication;
-- authorization;
-- password hashing;
-- salts;
-- sessions;
-- cookies;
-- JWT;
-- OAuth 2.0;
-- OpenID Connect;
-- TLS;
-- CORS;
-- CSRF;
-- XSS;
-- SQL Injection;
-- SSRF;
-- secrets;
-- rate limiting;
-- least privilege.
-
-Estudar o OWASP Top 10 atual.
 
 ---
 
@@ -930,6 +946,24 @@ Aprender primeiro os conceitos e serviços equivalentes a:
 
 Não tentar decorar dezenas de serviços.
 
+## Kubernetes básico
+
+Aprender o suficiente para entender a execução de uma aplicação containerizada, sem transformar o roadmap em uma formação de administração de clusters.
+
+Estudar:
+
+- Pod;
+- Deployment;
+- Service;
+- ConfigMap;
+- Secret;
+- Ingress;
+- réplicas;
+- readiness e liveness probes;
+- escalabilidade horizontal.
+
+Prática mínima: subir a aplicação uma vez em um cluster local, como kind ou minikube, e explicar os manifests sem depender de memorização.
+
 ---
 
 # Fase 15 — System Design
@@ -1010,6 +1044,14 @@ Estudar:
 - trade-offs;
 - priorização.
 
+## Desenvolvimento assistido por IA
+
+- usar IA para boilerplate, testes e investigação;
+- revisar criticamente cada mudança gerada;
+- validar saídas com testes, documentação e execução;
+- não compartilhar secrets, dados sensíveis ou código não autorizado;
+- manter capacidade de implementar e explicar as decisões sem depender da IA.
+
 ---
 
 # Trilha de Mercado — Executar em paralelo
@@ -1086,9 +1128,9 @@ Não transformar o perfil em diário de cada aula assistida.
 
 ## Portfólio
 
-Objetivo mínimo até a conclusão da graduação:
+Objetivo de portfólio até a conclusão da graduação: construir dois projetos âncora excelentes. Um terceiro projeto só entra se houver tempo e evidência suficientes.
 
-### Projeto 1 — Backend profissional
+### Projeto 1 — MarketRoute: backend profissional e monólito modular
 
 - Spring Boot;
 - PostgreSQL;
@@ -1099,17 +1141,14 @@ Objetivo mínimo até a conclusão da graduação:
 - segurança;
 - observabilidade;
 - deploy.
-
-### Projeto 2 — Monólito Modular
-
-- domínio mais complexo;
 - módulos;
+- domínio mais complexo;
 - arquitetura;
 - ADRs;
 - testes;
 - mensageria opcional.
 
-### Projeto 3 — Sistemas Distribuídos
+### Projeto 2 — Payments ou Notifications: sistemas distribuídos
 
 - 2–4 serviços;
 - mensageria;
@@ -1119,7 +1158,7 @@ Objetivo mínimo até a conclusão da graduação:
 - containers;
 - deploy.
 
-Projetos menores podem existir, mas esses devem servir como projetos âncora.
+Projetos menores podem existir, mas não devem competir com os dois projetos âncora nem substituir evidência de profundidade.
 
 ---
 
@@ -1142,9 +1181,9 @@ Projetos menores podem existir, mas esses devem servir como projetos âncora.
         ↓
 8. Linux + Docker + CI/CD
         ↓
-9. Redis + NoSQL
+9. Segurança
         ↓
-10. Segurança
+10. Redis + NoSQL
         ↓
 11. Mensageria + Sistemas Distribuídos
         ↓
@@ -1157,7 +1196,7 @@ Projetos menores podem existir, mas esses devem servir como projetos âncora.
 15. System Design
 ```
 
-`Engenharia de Software`, `Git`, comunicação técnica, projetos e posicionamento de mercado ocorrem em paralelo.
+`Engenharia de Software`, `Git`, comunicação técnica, projetos, entrevistas e uso responsável de IA ocorrem em paralelo.
 
 ---
 
