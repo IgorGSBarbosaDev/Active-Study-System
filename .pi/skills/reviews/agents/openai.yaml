@@ -1,0 +1,3 @@
+interface:
+  display_name: "Reviews"
+  short_description: "Run focused spaced-retrieval review sessions"

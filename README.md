@@ -8,5 +8,7 @@ Vault de estudos baseado em aprendizagem ativa, recuperação de conhecimento, f
 - `02_REVIEWS` — revisões.
 - `03_PROJECTS` — aplicações práticas.
 - `04_RESOURCES` — fontes externas.
+- `05_EXERCISES` — listas abertas, tentativas, feedback e gaps de prática.
 - `99_SYSTEM` — método, estratégia e templates.
-- `.pi` — automação do Pi Harness.
+- `.pi/skills` — fluxos de estudo, revisão, avaliação, prática, recomendação e auditoria.
+- `.pi/scripts` — sincronização determinística das visões derivadas e seus testes.

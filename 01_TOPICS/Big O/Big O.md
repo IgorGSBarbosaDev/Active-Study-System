@@ -2,8 +2,8 @@
 
 Data criação: 2026-09-15
 Data último estudo: 2026-09-15
-Data última revisão:
-Data próxima revisão: 2026-09-16
+Data última revisão: 2026-09-20
+Data próxima revisão: 2026-09-21
 Status: Praticando
 Nível: 3
 
@@ -18,8 +18,8 @@ Nível: 3
 
 ## Gaps
 
-- Recuperar sem assistência a distinção entre melhor, médio e pior caso.
 - Consolidar análise de espaço auxiliar em códigos mais variados.
+- Entender com autonomia a relação entre recursão, pilha de chamadas e espaço `O(log n)`.
 - Estudar e aplicar `O(n log n)`, `O(2ⁿ)` e análise de algoritmos de ordenação.
 
 ## Erros
@@ -28,6 +28,8 @@ Nível: 3
 - Classificou o melhor caso da busca linear como `O(n)`; modelo corrigido: melhor caso `O(1)`, pior caso `O(n)`.
 - Confundiu percorrer uma lista com alocar memória proporcional a ela; modelo corrigido: tempo pode ser `O(n)` com espaço auxiliar `O(1)` quando a operação ocorre no próprio array.
 - Classificou como `O(1)` o espaço de uma função que cria um novo array; modelo corrigido: a nova estrutura com `n` posições gera espaço auxiliar `O(n)`.
+- Ao explicar busca binária recursiva, atribuiu `O(log n)` à dependência da versão iterativa; modelo corrigido: cada chamada fica na pilha e a profundidade é `O(log n)`.
+- Contou 4 frames para 16 elementos; considerando a chamada inicial, a sequência `16 → 8 → 4 → 2 → 1` pode ter 5 frames, embora a classe assintótica continue `O(log n)`.
 
 ## Minhas anotações
 

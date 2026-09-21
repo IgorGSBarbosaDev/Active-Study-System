@@ -1,0 +1,3 @@
+interface:
+  display_name: "Study Summary"
+  short_description: "Create summaries from completed study sessions"

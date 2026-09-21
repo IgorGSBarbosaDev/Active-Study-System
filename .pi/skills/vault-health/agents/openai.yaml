@@ -1,0 +1,3 @@
+interface:
+  display_name: "Vault Health"
+  short_description: "Audit study vault integrity without editing"

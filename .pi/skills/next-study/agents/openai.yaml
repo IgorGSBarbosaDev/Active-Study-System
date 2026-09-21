@@ -1,0 +1,3 @@
+interface:
+  display_name: "Next Study"
+  short_description: "Recommend the next evidence-based study step"

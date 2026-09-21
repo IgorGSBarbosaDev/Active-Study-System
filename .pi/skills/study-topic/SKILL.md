@@ -1,96 +1,61 @@
 ---
 name: study-topic
-description: Conduz uma sessão ativa quando o usuário quer estudar ou aprender um tópico, diagnosticando antes de ensinar e persistindo progresso no Active Study System. Não use para uma revisão ou avaliação isolada.
+description: Ensina ou aprofunda um tópico por diagnóstico curto, blocos progressivos e verificação ativa, persistindo o progresso no Active Study System. Não use para revisão ou avaliação isolada.
 ---
 
 # Study Topic
 
-Conduza uma sessão de estudo ativa e mantenha o estado durável do tópico no Vault. Use `99_SYSTEM/LEARNING_METHOD.md` como autoridade pedagógica; não replique suas explicações.
+Conduza uma sessão de estudo ativa. Use `99_SYSTEM/LEARNING_METHOD.md` como autoridade pedagógica e os templates `topic.md` e `questions.md` para persistência.
 
 ## Preparação
 
-1. Leia `99_SYSTEM/LEARNING_METHOD.md` e os templates `99_SYSTEM/TEMPLATES/topic.md` e `99_SYSTEM/TEMPLATES/questions.md`.
-2. Extraia e normalize o nome solicitado apenas para pesquisa. Compare sem distinguir maiúsculas, acentos ou pontuação e procure títulos, nomes de pastas, aliases e links em todo o Vault.
-3. Se uma correspondência for inequívoca, reutilize-a. Se houver mais de uma correspondência plausível, mostre as candidatas e peça ao usuário que escolha. Não crie duplicata enquanto houver ambiguidade.
-4. Se o tópico for novo, crie `01_TOPICS/{{TOPIC}}/{{TOPIC}}.md` e `01_TOPICS/{{TOPIC}}/Perguntas sobre {{TOPIC}}.md` a partir dos templates e substitua `{{TOPIC}}` pelo nome apresentado ao usuário. Preserve um nome legível e remova somente caracteres inválidos para arquivos do Windows. Use datas ISO `YYYY-MM-DD`, defina `Status: Não iniciado` e `Nível: 0` e deixe datas ainda não ocorridas vazias.
-5. Se existir, leia os dois arquivos e considere conteúdo, histórico, gaps, erros, datas, status e nível. Se apenas um arquivo do par existir, preserve-o e crie somente o ausente a partir do template correspondente. Texto entre `<!-- USER-NOTES:START -->` e `<!-- USER-NOTES:END -->` é propriedade do usuário: nunca o substitua, mova, normalize ou reorganize.
+Localize o tópico pelas regras do `AGENTS.md`. Se for novo, crie:
 
-Pesquisa externa não é obrigatória. Quando for necessária para corrigir ou ensinar conteúdo técnico com segurança, priorize documentação oficial, especificações e outras fontes primárias.
+- `01_TOPICS/<TOPIC>/<TOPIC>.md` a partir de `99_SYSTEM/TEMPLATES/topic.md`;
+- `01_TOPICS/<TOPIC>/Perguntas sobre <TOPIC>.md` a partir de `99_SYSTEM/TEMPLATES/questions.md`.
 
-## Delimitação da sessão
+Preencha `Data criação`, `Status: Não iniciado` e `Nível: 0`; deixe datas futuras vazias. Se existir somente um arquivo do par, preserve-o e crie o ausente. Para tópico existente, leia os dois arquivos e use conteúdo, histórico, gaps, erros e estado como ponto de partida.
 
-Determine o objetivo do estudo, por que ele importa agora e o tempo disponível. Pergunte apenas pelo que não estiver claro no pedido ou no estado do tópico. Restrinja a sessão a um tópico e reduza o objetivo se ele não couber no tempo disponível.
+Pesquisa externa é opcional. Quando necessária para ensinar conteúdo atual ou sensível, priorize documentação oficial, especificações e fontes primárias.
 
-Faça um diagnóstico breve para localizar o ponto de partida, não para medir todo o domínio. Comece com uma solicitação ampla que permita ao usuário mostrar o que sabe. Faça somente as perguntas adicionais necessárias para resolver dúvidas que mudem o ensino, sem quantidade fixa. Encerre o diagnóstico assim que distinguir conhecimento demonstrado e gaps principais; não continue testando conceitos já evidenciados.
+## Sessão
 
-Concluído o diagnóstico, registre em `Perguntas sobre {{TOPIC}}.md`, sob `## Diagnóstico inicial`, as perguntas usadas, uma síntese das respostas e a avaliação inicial. Use registros compactos; não transcreva toda a conversa. Selecione um percurso pequeno e coerente com o objetivo e o tempo disponíveis, sem tentar esgotar o tópico.
+Determine objetivo, motivo e tempo somente quando isso não estiver claro. Reduza o escopo se não couber na sessão.
 
-## Condução
+Faça um diagnóstico mínimo: comece com uma solicitação ampla, esclareça apenas incertezas que mudem o ensino e pare assim que distinguir base demonstrada e gaps principais. Registre uma síntese em `## Diagnóstico inicial`; não transforme o diagnóstico em avaliação formal.
 
-Atue principalmente como professor interativo. A avaliação serve para adaptar e verificar o ensino, não para conduzir a sessão como entrevista ou questionário.
+Escolha o percurso:
 
-Escolha o caminho a partir do diagnóstico:
+- com pouca base, ensine o fundamento indispensável em blocos curtos;
+- com conhecimento prévio, pule o que já foi demonstrado e comece pelos gaps ou próximo passo relevante.
 
-- **Pouca ou nenhuma base:** construa os fundamentos progressivamente em blocos curtos. Comece pelo conceito indispensável e só então avance, conforme a compreensão, por finalidade, funcionamento, importância, ocorrência, aplicação e conceitos relacionados. Ensine um bloco por vez; não despeje toda a visão geral nem apresente todos os fundamentos de uma só vez.
-- **Conhecimento prévio:** trate explicações e aplicações corretas como evidência suficiente para a sessão. Comece a ensinar pelos gaps e pelo próximo passo relevante, omitindo o que já foi demonstrado.
+Depois de cada bloco relevante, peça uma explicação, aplicação ou verificação curta. Corrija a causa do erro, use no máximo uma variação focada e avance quando houver evidência suficiente. Faça uma solicitação por vez e não obrigue o usuário a descobrir conteúdo ainda não ensinado.
 
-Para cada parte relevante:
+Antes de encerrar, faça uma verificação integradora breve. Persista o diagnóstico quando concluído e consolide o restante somente no encerramento.
 
-1. explique um bloco curto e conectado ao anterior;
-2. quando houver conteúdo suficiente para verificar, peça uma explicação com palavras próprias, uma pequena aplicação ou uma pergunta focada;
-3. reconheça o que foi compreendido, corrija a causa de erros e complemente somente o necessário;
-4. use a resposta para escolher a próxima explicação.
+## Persistência
 
-Tentativa antes da resposta continua obrigatória em diagnósticos, verificações e problemas propostos, mas não obrigue o usuário a descobrir sozinho conteúdo que ainda não foi ensinado. Faça uma pergunta ou exercício por vez quando precisar verificar; não use baterias de perguntas como estrutura da aula.
+Em `Perguntas sobre <TOPIC>.md`, atualize:
 
-Considere coberto durante a sessão todo conceito demonstrado com evidência suficiente. Só volte a testá-lo se surgir contradição, se ele for pré-requisito para o próximo bloco ou na verificação final integradora. Após erro relevante, ensine a correção e use uma única variação direcionada; se a correção for demonstrada, avance. Se o gap persistir e bloquear o progresso, ensine novamente por outra abordagem antes de verificar.
+- `## Perguntas adaptativas`: verificações relevantes, síntese das tentativas e feedback decisivo;
+- `## Resultado`: evidências e assistência necessária;
+- `## Gaps identificados`: gaps ainda abertos.
 
-Use analogias, diagramas, exemplos, teoria, aplicação, testes, falhas, diagnóstico e trade-offs apenas quando ajudarem o próximo objetivo de aprendizagem. Não transforme essa lista em checklist obrigatório.
+No arquivo principal, atualize sem apagar conteúdo válido:
 
-Antes de encerrar, faça uma verificação breve e integradora do objetivo da sessão, não uma nova sequência de perguntas. Respeite o tempo informado e pare em um ponto coerente, registrando como gap o que ficar para continuação.
+- `## Conteúdo`: conhecimento confirmado ou corrigido;
+- `## Gaps`: gaps relevantes;
+- `## Erros`: raciocínio incorreto, causa e correção verificada;
+- `Data último estudo`: data atual;
+- `Data próxima revisão`: D+1 quando houver conhecimento novo ou gap relevante;
+- `Status` e `Nível`: conforme a evidência definida em `LEARNING_METHOD.md`.
 
-Consolide em `## Perguntas adaptativas` apenas verificações relevantes, sínteses das tentativas, feedback decisivo e resultado. Não interrompa cada interação para editar o arquivo; persista o diagnóstico ao concluí-lo e consolide o restante no encerramento. Um erro relevante deve registrar o raciocínio incorreto e a correção verificada, não apenas `errado`.
+Não altere `Data última revisão`. Não eleve nível por conteúdo apenas apresentado.
 
-## Encerramento e persistência
+## Handoff e encerramento
 
-Encerre quando o objetivo couber na evidência obtida ou o tempo disponível terminar. Não declare domínio para concluir artificialmente a sessão.
+Crie resumo somente se o usuário o pedir, usando `study-summary`. Não inicie exercícios automaticamente: quando houver base útil, ofereça `practice-set` e aguarde concordância, salvo se o pedido original já incluir prática.
 
-Atualize `Perguntas sobre {{TOPIC}}.md`:
+Informe objetivo coberto, evidências, gaps, estado, próxima revisão e arquivos alterados. Sincronize as visões derivadas pelo procedimento global do `AGENTS.md`.
 
-- `## Resultado`: evidências do que o usuário conseguiu explicar ou aplicar, indicando a assistência necessária;
-- `## Gaps identificados`: gaps ainda abertos e erros que devem ser recuperados depois.
-
-Atualize `{{TOPIC}}.md` sem apagar conteúdo válido:
-
-- `## Conteúdo`: conhecimento confirmado ou corrigido na sessão;
-- `## Gaps`: gaps relevantes ainda abertos;
-- `## Erros`: erros relevantes, sua causa e o modelo corrigido;
-- preserve integralmente `## Minhas anotações` e o bloco `USER-NOTES`.
-
-Regras dos campos:
-
-- defina `Data criação` somente ao criar o tópico;
-- ao concluir estudo ou aprofundamento, defina `Data último estudo` como a data atual;
-- não altere `Data última revisão`, reservada a uma futura Skill de revisão;
-- após uma sessão com conhecimento novo ou gaps relevantes, defina `Data próxima revisão` como a data atual mais um dia (`D+1`); alterações secundárias não reiniciam a revisão;
-- use somente `Não iniciado`, `Estudando`, `Praticando` ou `Consolidado` em `Status`;
-- mantenha `Status` e `Nível` independentes: status representa a fase do tópico, nível representa domínio observado.
-
-Classifique `Nível` somente por evidência observada:
-
-- `0` — não compreendeu;
-- `1` — reconhece;
-- `2` — entende com ajuda;
-- `3` — explica corretamente;
-- `4` — aplica corretamente;
-- `5` — analisa trade-offs, diagnostica problemas e lida com casos não óbvios.
-
-Não aumente o nível por conteúdo apenas apresentado. Se o desempenho contradisser o nível existente, registre o gap e ajuste-o à evidência atual.
-
-Ao terminar, informe sucintamente o objetivo coberto, o status, o nível resultante, os principais gaps, a próxima revisão e os arquivos atualizados.
-
-## Limites
-
-- Não execute uma revisão ou avaliação independente; apenas deixe dados úteis para futuras Skills `reviews` e `assess-topic`.
-- Não altere templates, arquivos de `99_SYSTEM/METHOD`, `99_SYSTEM/STRATEGY` ou notas fora do tópico em estudo.
-- Não trate releitura, resposta assistida ou conclusão de uma única sessão como consolidação.
+Não execute revisão ou avaliação independente e não altere estratégia, método, templates ou notas fora do tópico.
