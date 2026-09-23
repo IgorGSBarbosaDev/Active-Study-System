@@ -22,14 +22,16 @@ Pesquisa externa é opcional. Quando necessária para ensinar conteúdo atual ou
 
 Determine objetivo, motivo e tempo somente quando isso não estiver claro. Reduza o escopo se não couber na sessão.
 
-Faça um diagnóstico mínimo: comece com uma solicitação ampla, esclareça apenas incertezas que mudem o ensino e pare assim que distinguir base demonstrada e gaps principais. Registre uma síntese em `## Diagnóstico inicial`; não transforme o diagnóstico em avaliação formal.
+Faça um diagnóstico mínimo: comece pelo que o usuário diz conhecer e desconhecer, com uma solicitação ampla quando isso ainda não estiver claro. Distinga a base nos pré-requisitos do conhecimento do tópico novo. Se o usuário declarar uma base parcial relevante, use em geral uma ou duas verificações graduais, da simples até no máximo intermediária, apenas para decidir onde iniciar a aula. Pare quando distinguir base demonstrada e gaps principais; não interrogue sobre conteúdo ainda não ensinado. Registre uma síntese em `## Diagnóstico inicial`; não transforme o diagnóstico em avaliação formal.
 
 Escolha o percurso:
 
-- com pouca base, ensine o fundamento indispensável em blocos curtos;
+- com pouca base, ensine o fundamento indispensável em blocos conectados;
 - com conhecimento prévio, pule o que já foi demonstrado e comece pelos gaps ou próximo passo relevante.
 
-Depois de cada bloco relevante, peça uma explicação, aplicação ou verificação curta. Corrija a causa do erro, use no máximo uma variação focada e avance quando houver evidência suficiente. Faça uma solicitação por vez e não obrigue o usuário a descobrir conteúdo ainda não ensinado.
+Em cada bloco, explique o mecanismo e sua finalidade com a profundidade necessária ao objetivo, não apenas a definição. Mostre o funcionamento em um exemplo acompanhado, onde e por que se aplica, e as condições ou erros que importam para usá-lo corretamente. Quando a escolha entre abordagens ou a forma de cobrança for relevante, conecte-as ao mecanismo já explicado. Distribua esses aspectos ao longo da sessão conforme a compreensão observada; não transforme cada bloco numa lista obrigatória nem entregue uma solução completa antes de construir o raciocínio.
+
+Depois de cada bloco relevante, peça uma explicação, previsão, rastreamento ou aplicação curta que verifique o ponto ensinado. Reconhecer uma definição não basta para concluir que o usuário sabe usar o conceito. Corrija a causa do erro, use no máximo uma variação focada e avance quando houver evidência suficiente para o objetivo. Faça uma solicitação por vez.
 
 Antes de encerrar, faça uma verificação integradora breve. Persista o diagnóstico quando concluído e consolide o restante somente no encerramento.
 

@@ -20,6 +20,8 @@ A atenção é limitada. Cada sessão deve ter um tópico e um objetivo claros. 
 
 O feedback vem depois da tentativa quando já existe base para tentar. Quando não existe, ensine apenas o suporte necessário e verifique a recuperação logo depois. Analogias, diagramas, exemplos, código, testes e falhas são recursos opcionais, usados somente quando ajudam o objetivo atual.
 
+Ensino progressivo divide o assunto em partes conectadas; não reduz cada parte a uma definição. Dê profundidade suficiente para o objetivo da sessão: construa como e por que o conceito funciona, onde é útil e como aplicá-lo ou reconhecê-lo em problemas. Use um exemplo acompanhado passo a passo, erros frequentes ou uma comparação quando isso esclarecer o mecanismo ou a escolha. Ajuste a profundidade à base demonstrada, sem exigir que o aluno descubra sozinho o que ainda não foi ensinado.
+
 Considere coberto o conceito demonstrado. Retome-o apenas por contradição, dependência ou verificação integradora. Corrija a causa do erro e não prolongue a sessão para buscar exaustividade.
 
 ## Estudar, praticar, revisar e avaliar

@@ -20,7 +20,7 @@ Uma revisão explícita pode ocorrer sem data programada ou antes da data previs
 1. Defina foco curto a partir dos gaps, erros e conceitos centrais necessários.
 2. Escolha o menor conjunto capaz de produzir evidência útil.
 3. Peça uma recuperação, explicação ou aplicação sem consulta e aguarde a tentativa; faça uma solicitação por vez.
-4. Em erro relevante, ensine somente a correção necessária e use uma variação curta para verificar a mudança.
+4. Em erro pontual, ensine somente a correção necessária e use uma variação curta para verificar a mudança. Se a tentativa mostrar que o mecanismo básico não foi compreendido, registre o gap e, após encerrar a revisão, ofereça aprofundamento com `study-topic`.
 5. Encerre pontos demonstrados com autonomia e pare quando as prioridades estiverem evidenciadas ou os gaps localizados.
 
 Não transforme revisão em aula completa ou avaliação formal. Direcione conteúdo novo para `study-topic` e medição formal para `assess-topic`.

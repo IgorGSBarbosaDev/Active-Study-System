@@ -19,6 +19,8 @@ Determine a decisão: nível atual, dimensão específica ou possível consolida
 - explicação e aplicação em níveis intermediários;
 - diagnóstico, alternativas, trade-offs e transferência em níveis altos.
 
+Escolha tarefas que revelem o funcionamento e, quando a decisão exigir, o uso ou a escolha da abordagem. Repetir uma definição demonstra reconhecimento, mas não sustenta por si só nível de aplicação ou análise. Não exija tarefas de nível alto para medir compreensão inicial.
+
 ## Bloco avaliativo
 
 1. Apresente uma tarefa por vez e aguarde resposta sem consulta.
